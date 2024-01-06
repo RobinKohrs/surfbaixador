@@ -27,6 +27,8 @@ suppressWarnings({
     )
 
     # raw data
+    r = fromJSON(url)
+    print(r)
     raw_data = safe_fromJSON(url)
 
     if (!is.null(raw_data$error)) {
