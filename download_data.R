@@ -50,10 +50,10 @@ suppressWarnings({
 
 # filter out nas
 regions_data = regions_data[!is.na(regions_data)]
+regions_data = regions_data[lapply(regions_data, is.data.frame) %>% unlist]
 
-
-# bind together to make on big chunky df
-all = bind_rows(regions_data)
+# bind all toghether
+all = list_rbind(regions_data)
 
 # create path for the raw data
 time_id = format(Sys.time(), "%Y_%m_%d_%H")
