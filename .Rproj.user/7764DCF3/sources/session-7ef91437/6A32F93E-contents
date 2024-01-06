@@ -4,7 +4,7 @@ library(jsonlite)
 source("utils.R")
 
 # dirs for the data -------------------------------------------------
-dir_output = "/data"
+dir_output = "data"
 
 # get the cells -----------------------------------------------------------
 cells = get_cells(4*4*4)
