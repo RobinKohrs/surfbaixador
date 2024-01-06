@@ -7,7 +7,7 @@ source("utils.R")
 dir_output = "/data"
 
 # get the cells -----------------------------------------------------------
-cells = rondas::get_cells(4*4*4)
+cells = get_cells(4*4*4)
 
 # safe version of queriying data ------------------------------------------
 safe_fromJSON = purrr::safely(jsonlite::fromJSON)
