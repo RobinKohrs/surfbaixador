@@ -58,13 +58,11 @@ all = list_rbind(regions_data)
 # create path for the raw data
 time_id = format(Sys.time(), "%Y_%m_%d_%H")
 
+saveRDS(c("hi"), "data/test.Rds")
 op = glue("{dir_output}/{time_id}.Rds")
+print("here")
 if(file.exists(op)){
   unlink(op)
-}
-
-if(!dir.exists(dirname(op))){
-  dir.create(dirname(op), recursive = T)
 }
 
 saveRDS(all, op)
