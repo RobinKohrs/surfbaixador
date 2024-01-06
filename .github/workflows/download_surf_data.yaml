@@ -41,6 +41,7 @@ jobs:
       run: |
         R -e 'install.packages("purrr")'
         R -e 'install.packages("glue")'
+        R -e 'install.packages("jsonlite")'
     # Run R script
     - name: Scrape
       run: Rscript download_data.R

@@ -1,5 +1,6 @@
 library(purrr)
 library(glue)
+library(jsonlite)
 source("utils.R")
 
 # dirs for the data -------------------------------------------------
@@ -9,7 +10,7 @@ dir_output = "/data"
 cells = rondas::get_cells(4*4*4)
 
 # safe version of queriying data ------------------------------------------
-safe_fromJSON = purrr::safely(fromJSON)
+safe_fromJSON = purrr::safely(jsonlite::fromJSON)
 
 # get raw data ----------------------------------------------------------------
 regions_data = vector("list", length(length(cells)))
